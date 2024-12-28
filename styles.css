@@ -1,22 +1,19 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.8;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #f4f4f9;
     color: #333;
-    font-size: 18px;
 }
 
 h1, h2, h3 {
-    color: #ffffff;
-    margin-bottom: 20px;
-    line-height: 1.4;
+    color: #003d33;
 }
 
 a {
-    color: #00796b;
+    color: #00897b;
     text-decoration: none;
 }
 
@@ -31,33 +28,18 @@ a:hover {
     padding: 20px;
 }
 
-a.button {
-    display: inline-block;
-    background: #004d40;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 10px;
-}
-
-a.button:hover {
-    background: #00796b;
-}
-
 /* Header Styles */
 header {
-    background: #000000;
+    background: #003d33; /* Updated background color */
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    border-bottom: 5px solid #004d40;
 }
 
 /* Footer Styles */
 footer {
-    background: #2a3d66;
+    background: #003d33;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -66,27 +48,27 @@ footer {
 
 /* Contact Info Section */
 .contact-info {
-    background: #f4f4f9;
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 25px;
+    background: #e0f7fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 .contact-info p {
-    margin: 12px 0;
+    margin: 10px 0;
 }
 
 /* Contact Form Styles */
 .contact-form form {
     background: #fff;
-    padding: 25px;
+    padding: 20px;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .contact-form label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-weight: bold;
 }
 
@@ -94,55 +76,61 @@ footer {
 .contact-form select,
 .contact-form textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
+    padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 6px;
+    border-radius: 4px;
 }
 
 .contact-form button {
-    background: #2a3d66;
+    background: #003d33;
     color: #fff;
-    padding: 12px 18px;
+    padding: 10px 15px;
     border: none;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .contact-form button:hover {
-    background: #405b89;
+    background: #00695c;
+}
+
+/* Button Class for Links */
+a.button {
+    display: inline-block;
+    background: #003d33;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+a.button:hover {
+    background: #00695c;
 }
 
 /* Additional Options Section */
 .additional-options {
-    background: #f7f9fc;
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 25px;
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 .additional-options .option {
-    margin-bottom: 25px;
-}
-
-.additional-options .btn {
-    display: inline-block;
-    background: #2a3d66;
-    color: #fff;
-    padding: 12px 22px;
-    border-radius: 6px;
-    text-decoration: none;
-    margin-top: 12px;
-}
-
-.additional-options .btn:hover {
-    background: #405b89;
+    margin-bottom: 20px;
 }
 
 /* Social Media Section */
 .social-media {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .social-media ul {
@@ -152,30 +140,19 @@ footer {
 
 .social-media li {
     display: inline;
-    margin: 0 12px;
-}
-
-/* List Item Spacing */
-ul, ol {
-    margin-bottom: 20px;
-}
-
-li {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 1.6;
+    margin: 0 10px;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     .container {
         width: 100%;
-        padding: 15px;
+        padding: 10px;
     }
 
     .contact-info,
     .contact-form,
     .additional-options {
-        padding: 20px;
+        padding: 15px;
     }
 }
