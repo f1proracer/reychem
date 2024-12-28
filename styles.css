@@ -31,6 +31,22 @@ a:hover {
     padding: 20px;
 }
 
+a.button {
+    display: inline-block;
+    background: #004d40;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+a.button:hover {
+    background: #00796b;
+}
+
 /* Header Styles */
 header {
     background: #2a3d66;
