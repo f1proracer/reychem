@@ -139,6 +139,16 @@ footer {
     margin: 0 12px;
 }
 
+/* List Item Spacing */
+ul, ol {
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .container {
