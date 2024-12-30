@@ -2675,7 +2675,20 @@ input, select, textarea {
 			-ms-transform: scale(1.05);
 			transform: scale(1.05);
 		}
-
+/* my code */
+		.centered-image-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh; /* This makes the container full height of the viewport */
+		  }
+		  
+		  .centered-image-container img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+		  }
+		  
 /* Actions */
 
 	ul.actions {
