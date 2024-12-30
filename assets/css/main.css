@@ -2674,23 +2674,7 @@ input, select, textarea {
 			-webkit-transform: scale(1.05);
 			-ms-transform: scale(1.05);
 			transform: scale(1.05);
-		}
-/* my code */
-.centered-image-container {
-	width: 300px;  /* Adjust this to your desired width */
-	height: 300px; /* Adjust this to your desired height */
-	overflow: hidden;
-	margin: 0 auto; /* This centers the container horizontally */
-  }
-  
-  .centered-image {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: center;
-  }
-  
-		  
+		}		  
 /* Actions */
 
 	ul.actions {
