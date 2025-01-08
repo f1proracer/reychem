@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .diagram-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .circle-diagram {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border: 2px dashed #ccc;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .system {
+      position: absolute;
+      text-align: center;
+    }
+
+    .system span {
+      display: block;
+      margin-top: 5px;
+    }
+
+    .system.e {
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .system.fa {
+      bottom: 10%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+
+    .system.erp {
+      left: 10%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .system.m2r {
+      right: 10%;
+      top: 50%;
+      transform: translate(50%, -50%);
+    }
+
+    .callout {
+      position: absolute;
+      background: #fff;
+      padding: 5px 10px;
+      border: 1px solid #f00;
+      border-radius: 5px;
+      font-size: 12px;
+      color: #f00;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .callout-1 {
+      top: 10%;
+      left: 80%;
+    }
+
+    .callout-2 {
+      bottom: 20%;
+      left: 10%;
+    }
+  </style>
+</head>
+<body>
+  <div class="diagram-container">
+    <h1>The Challenge</h1>
+    <div class="circle-diagram">
+      <div class="system e">
+        <img src="icon_epmt.png" alt="EPMT" width="40">
+        <span>EPMT</span>
+      </div>
+      <div class="system fa">
+        <img src="icon_fa.png" alt="FA" width="40">
+        <span>FA</span>
+      </div>
+      <div class="system erp">
+        <img src="icon_erp.png" alt="ERP" width="40">
+        <span>ERP</span>
+      </div>
+      <div class="system m2r">
+        <img src="icon_m2r.png" alt="M2R" width="40">
+        <span>M2R</span>
+      </div>
+      <div class="callout callout-1">Data inconsistency</div>
+      <div class="callout callout-2">Workflow disruption</div>
+    </div>
+  </div>
+</body>
+</html>
