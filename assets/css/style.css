@@ -262,10 +262,16 @@ p { line-height: 1.75; color: var(--text-muted); }
   display: flex;
   align-items: center;
   gap: var(--space-3);
-  font-weight: 800;
-  font-size: var(--text-xl);
   color: var(--primary);
-  letter-spacing: -0.03em;
+  text-decoration: none;
+}
+.nav-logo span {
+  font-family: 'Montserrat', 'Avenir Next', 'Futura', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--primary);
 }
 .nav-logo .logo-mark {
   width: 38px; height: 38px;
@@ -695,19 +701,16 @@ p { line-height: 1.75; color: var(--text-muted); }
 
 /* ── 16. CTA SECTION ────────────────────────────────────── */
 .cta-section {
-  background: linear-gradient(135deg, var(--primary) 0%, #0A1628 100%);
+  background: linear-gradient(135deg, #FFFBF0 0%, #FAFAF9 55%, #F5F8FF 100%);
   padding: var(--space-24) 0;
   position: relative; overflow: hidden;
+  border-top: 1px solid var(--border);
 }
-.cta-section::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(217,119,6,0.18) 0%, transparent 60%);
-}
+.cta-section::before { content: none; }
 .cta-inner { position: relative; z-index: 1; text-align: center; }
-.cta-inner h2 { color: var(--white); margin-bottom: var(--space-5); }
+.cta-inner h2 { color: var(--primary); margin-bottom: var(--space-5); }
 .cta-inner p {
-  color: rgba(255,255,255,0.75);
+  color: var(--text-muted);
   font-size: var(--text-lg);
   margin-bottom: var(--space-10);
   max-width: 560px;
@@ -1550,13 +1553,13 @@ p { line-height: 1.75; color: var(--text-muted); }
 .cta-title {
   font-size: clamp(1.5rem, 3vw, var(--text-4xl));
   font-weight: 800;
-  color: var(--white);
+  color: var(--primary);
   letter-spacing: -0.025em;
   margin-bottom: var(--space-5);
 }
 .cta-sub {
   font-size: var(--text-lg);
-  color: rgba(255,255,255,0.72);
+  color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: var(--space-10);
   max-width: 560px;
@@ -1567,9 +1570,17 @@ p { line-height: 1.75; color: var(--text-muted); }
 /* ── FOOTER (new structure) ──────────────────────────────── */
 .footer-logo {
   display: flex; align-items: center; gap: var(--space-3);
-  font-size: var(--text-xl); font-weight: 800; color: var(--white);
-  letter-spacing: -0.03em; text-decoration: none;
+  text-decoration: none;
   margin-bottom: var(--space-4);
+  color: var(--white);
+}
+.footer-logo span {
+  font-family: 'Montserrat', 'Avenir Next', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--white);
 }
 .footer-tagline { font-size: var(--text-sm); color: rgba(255,255,255,0.5); line-height: 1.75; margin-bottom: var(--space-5); }
 .footer-wa { margin-top: var(--space-2); }
