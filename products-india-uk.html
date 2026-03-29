@@ -70,10 +70,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-
-  <!-- Google Analytics — GA4 Measurement ID: G-JEV6P6YR2T -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JEV6P6YR2T"></script>
-  <script>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -83,13 +80,17 @@
 <body>
 
   <!-- ── COOKIE BANNER ──────────────────────────────────── -->
-  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie notice">
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie notice">
     <div class="cookie-body">
-      <p>We use essential cookies only. <a href="#" id="cookie-learn-more" class="cookie-link">What does that mean?</a></p>
-      <p id="cookie-detail" class="cookie-detail" hidden>We set a single cookie to remember that you have seen this notice. No tracking, no analytics, no advertising. Nothing is shared with third parties.</p>
+      <p>We use essential cookies to run this site, and analytics cookies (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="cookie-link">Google Analytics</a>) to understand how visitors use it. <a href="#" id="cookie-learn-more" class="cookie-link">What are cookies?</a></p>
+      <p id="cookie-detail" class="cookie-detail" hidden>Essential cookies keep the site working (e.g. remembering this notice). Analytics cookies (Google Analytics) help us see which pages are most useful — no advertising, no personal data sold. Declining analytics has no effect on how the site works.</p>
     </div>
-    <button id="cookie-accept" class="btn btn-sm btn-primary">Got it</button>
+    <div class="cookie-actions">
+      <button id="cookie-essential" class="btn btn-sm btn-outline">Essential only</button>
+      <button id="cookie-accept" class="btn btn-sm btn-primary">Accept analytics</button>
+    </div>
   </div>
+
 
   <!-- ── NAV ───────────────────────────────────────────── -->
   <header class="nav-wrap" id="nav">

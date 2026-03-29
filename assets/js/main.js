@@ -152,28 +152,64 @@ function initContactForm() {
 }
 
 /* ── 5. Cookie Banner ─────────────────────────────────────── */
+function loadGA4() {
+  if (window._ga4Loaded) return;
+  window._ga4Loaded = true;
+
+  const script = document.createElement('script');
+  script.async = true;
+  script.src   = 'https://www.googletagmanager.com/gtag/js?id=G-JEV6P6YR2T';
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', 'G-JEV6P6YR2T');
+}
+
+function hideCookieBanner(banner) {
+  banner.classList.add('hidden');
+  setTimeout(() => { banner.hidden = true; }, 300);
+}
+
 function initCookieBanner() {
-  // Support both old and new ID names
-  const banner    = $('#cookie-banner') || $('#cookieBanner');
-  const acceptBtn = $('#cookie-accept') || $('#cookieAccept');
+  const banner       = $('#cookie-banner') || $('#cookieBanner');
   if (!banner) return;
 
-  if (localStorage.getItem('rc-cookies-ok')) {
+  const acceptBtn    = $('#cookie-accept')    || $('#cookieAccept');
+  const essentialBtn = $('#cookie-essential');
+
+  // Already decided — honour previous choice and hide banner
+  const hasAnalytics = localStorage.getItem('rc-cookies-analytics');
+  const hasEssential = localStorage.getItem('rc-cookies-essential');
+  const hasLegacy    = localStorage.getItem('rc-cookies-ok');   // old single-button
+
+  if (hasAnalytics || hasEssential || hasLegacy) {
     banner.classList.add('hidden');
     banner.hidden = true;
+    if (hasAnalytics || hasLegacy) loadGA4();   // fire GA4 for previous acceptors
     return;
   }
 
+  // "Accept analytics" button
   if (acceptBtn) {
     acceptBtn.addEventListener('click', () => {
-      localStorage.setItem('rc-cookies-ok', '1');
-      banner.classList.add('hidden');
-      // Also set hidden after transition
-      setTimeout(() => { banner.hidden = true; }, 300);
+      localStorage.setItem('rc-cookies-analytics', '1');
+      loadGA4();
+      hideCookieBanner(banner);
     });
   }
 
-  // "What does that mean?" expands inline detail
+  // "Essential only" button
+  if (essentialBtn) {
+    essentialBtn.addEventListener('click', () => {
+      localStorage.setItem('rc-cookies-essential', '1');
+      hideCookieBanner(banner);
+    });
+  }
+
+  // "What are cookies?" expands inline detail
   const learnMore  = document.getElementById('cookie-learn-more');
   const cookieInfo = document.getElementById('cookie-detail');
   if (learnMore && cookieInfo) {
@@ -181,7 +217,7 @@ function initCookieBanner() {
       e.preventDefault();
       const isHidden = cookieInfo.hidden;
       cookieInfo.hidden = !isHidden;
-      learnMore.textContent = isHidden ? 'Show less' : 'What does that mean?';
+      learnMore.textContent = isHidden ? 'Show less' : 'What are cookies?';
     });
   }
 }
