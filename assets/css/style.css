@@ -1235,27 +1235,29 @@ p { line-height: 1.75; color: var(--text-muted); }
   display: flex;
   align-items: center;
   width: 100%;
-  font-size: 1.125rem;    /* 18px — readable without being huge */
-  font-weight: 600;
-  color: var(--primary);
-  padding: 18px var(--space-6);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 20px var(--space-6);
   border-bottom: 1px solid var(--border-light);
-  border-radius: 0;       /* no pill — active highlight runs edge-to-edge */
+  border-left: 3px solid transparent;   /* placeholder — filled for active */
+  border-radius: 0;
   background: transparent;
-  transition: background var(--transition), color var(--transition);
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
 .nav-wrap.nav-open .nav-links li:last-child .nav-link {
   border-bottom: none;
 }
-.nav-wrap.nav-open .nav-links .nav-link:hover,
-.nav-wrap.nav-open .nav-links .nav-link:active {
+.nav-wrap.nav-open .nav-links .nav-link:hover {
   background: var(--bg);
   color: var(--primary);
+  border-left-color: var(--border);
 }
 .nav-wrap.nav-open .nav-links .nav-link.active {
-  background: var(--accent-light);
   color: var(--accent-dark);
   font-weight: 700;
+  background: var(--accent-light);
+  border-left-color: var(--accent);    /* amber left accent bar */
 }
 
 /* ── BADGE DOT ──────────────────────────────────────────── */
