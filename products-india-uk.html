@@ -70,6 +70,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Google Analytics — replace GA_MEASUREMENT_ID with your G-XXXXXXXXXX id -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
 </head>
 <body>
 
@@ -113,7 +122,7 @@
     <section class="page-hero" aria-label="Products and HS codes guide">
       <div class="container">
         <div class="page-hero-content animate-up">
-          <div class="badge badge-white">Products &amp; HS Codes</div>
+          <div class="badge badge-primary">Products &amp; HS Codes</div>
           <h1 class="page-hero-title">Does your Indian chemical product need REACH registration for the UK or EU?</h1>
           <p class="page-hero-sub">A plain-English guide to the most commonly exported Indian chemical categories — with HS codes, REACH status, and what you need to do. Can't find yours? <a href="https://wa.me/447700000000?text=Hi%2C+I+want+to+check+if+my+product+needs+REACH" target="_blank" rel="noopener" class="link-white-underline">Send us a WhatsApp</a>.</p>
         </div>

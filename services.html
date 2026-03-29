@@ -20,6 +20,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Google Analytics — replace GA_MEASUREMENT_ID with your G-XXXXXXXXXX id -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
 </head>
 <body>
 
@@ -63,7 +72,7 @@
     <section class="page-hero" aria-label="Services overview">
       <div class="container">
         <div class="page-hero-content animate-up">
-          <div class="badge badge-white">Our services</div>
+          <div class="badge badge-primary">Our services</div>
           <h1 class="page-hero-title">REACH compliance services, explained in plain English</h1>
           <p class="page-hero-sub">We don't do off-the-shelf packages. Every quote is based on your actual substances, tonnage, and what you need to export legally. Below is what we offer — and what each service actually means for your business.</p>
         </div>

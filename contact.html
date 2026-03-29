@@ -20,6 +20,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Google Analytics — replace GA_MEASUREMENT_ID with your G-XXXXXXXXXX id -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
 </head>
 <body>
 
@@ -63,7 +72,7 @@
     <section class="page-hero page-hero-sm" aria-label="Contact us">
       <div class="container">
         <div class="page-hero-content animate-up">
-          <div class="badge badge-white">Get in touch</div>
+          <div class="badge badge-primary">Get in touch</div>
           <h1 class="page-hero-title">Start with a free REACH check</h1>
           <p class="page-hero-sub">Tell us what you make and where you want to sell it. We'll review your products and come back to you within 24 hours — no charge, no commitment.</p>
         </div>
