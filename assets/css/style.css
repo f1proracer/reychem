@@ -1130,6 +1130,10 @@ p { line-height: 1.75; color: var(--text-muted); }
 }
 .nav-wrap.nav-transparent { background: transparent; }
 .nav-wrap .nav {
+  /* Override the old .nav { position: fixed } rule — the wrapper handles positioning.
+     Without this, height:100% resolves against the viewport (not the 72px wrapper),
+     pushing flex-centred links to the vertical middle of the screen. */
+  position: static !important;
   height: 100%;
   display: flex;
   align-items: center;
@@ -1138,6 +1142,26 @@ p { line-height: 1.75; color: var(--text-muted); }
 .nav-wrap.nav-transparent .nav-logo { color: var(--white); }
 .nav-wrap.nav-transparent .nav-link { color: rgba(255,255,255,0.85); }
 .nav-wrap.nav-transparent .nav-link:hover { color: var(--white); background: rgba(255,255,255,0.10); }
+/* Active link on transparent nav — subtle white tint, not the light-green used on solid nav */
+.nav-wrap.nav-transparent .nav-link.active {
+  color: var(--white);
+  background: rgba(255,255,255,0.15);
+  border-radius: var(--radius-sm);
+}
+
+/* "See our services" — visible outline on dark hero background */
+.btn-outline-white {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.45);
+  border-radius: var(--radius-sm);
+}
+.btn-outline-white:hover {
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.75);
+  color: var(--white);
+  transform: translateY(-1px);
+}
 
 .nav-hamburger {
   display: none;
