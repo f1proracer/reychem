@@ -120,6 +120,7 @@ p { line-height: 1.75; color: var(--text-muted); }
 
 /* ── 4. LAYOUT ──────────────────────────────────────────── */
 .container {
+  width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--space-6);
