@@ -1202,23 +1202,36 @@ p { line-height: 1.75; color: var(--text-muted); }
 .nav-hamburger.active span:nth-child(2) { opacity: 0; }
 .nav-hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* Mobile nav open state */
+/* Mobile nav open state
+   Safari fix: backdrop-filter on .nav-wrap makes it a containing block for
+   position:fixed children, collapsing the panel to 0px height. Fix: expand
+   .nav-wrap to full screen and use position:absolute on .nav-links instead. */
+.nav-wrap.nav-open {
+  height: 100dvh;
+  height: 100vh; /* fallback for older Safari */
+  overflow: hidden;
+  background: var(--white) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
 .nav-wrap.nav-open .nav-links {
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   top: var(--nav-height); left: 0; right: 0; bottom: 0;
   background: var(--white);
   padding: var(--space-8) var(--space-6);
   gap: var(--space-2);
   overflow-y: auto;
   z-index: 998;
-  box-shadow: var(--shadow-xl);
+  border-top: 1px solid var(--border);
 }
 .nav-wrap.nav-open .nav-links .nav-link {
   font-size: var(--text-lg);
   padding: var(--space-4);
   border-bottom: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  width: 100%;
 }
 
 /* ── BADGE DOT ──────────────────────────────────────────── */
