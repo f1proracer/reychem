@@ -172,6 +172,18 @@ function initCookieBanner() {
       setTimeout(() => { banner.hidden = true; }, 300);
     });
   }
+
+  // "What does that mean?" expands inline detail
+  const learnMore  = document.getElementById('cookie-learn-more');
+  const cookieInfo = document.getElementById('cookie-detail');
+  if (learnMore && cookieInfo) {
+    learnMore.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isHidden = cookieInfo.hidden;
+      cookieInfo.hidden = !isHidden;
+      learnMore.textContent = isHidden ? 'Show less' : 'What does that mean?';
+    });
+  }
 }
 
 /* ── 6. Animated Counters ─────────────────────────────────── */

@@ -25,7 +25,10 @@
 
   <!-- ── COOKIE BANNER ──────────────────────────────────── -->
   <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie notice">
-    <p>We use cookies to improve your experience. <a href="#" class="cookie-link">Learn more</a></p>
+    <div class="cookie-body">
+      <p>We use essential cookies only. <a href="#" id="cookie-learn-more" class="cookie-link">What does that mean?</a></p>
+      <p id="cookie-detail" class="cookie-detail" hidden>We set a single cookie to remember that you have seen this notice. No tracking, no analytics, no advertising. Nothing is shared with third parties.</p>
+    </div>
     <button id="cookie-accept" class="btn btn-sm btn-primary">Got it</button>
   </div>
 
@@ -88,7 +91,7 @@
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
           </div>
           <div class="service-body">
-            <div class="badge badge-accent">Service 1</div>
+            <div class="badge badge-accent">Free starter service</div>
             <h2 id="reach-check-heading" class="service-heading">REACH Check &amp; Game Plan</h2>
             <p class="service-lead">The best place to start. Before you spend money on anything else, you need to know exactly what's required for your specific products.</p>
             <p>We take a look at your substance list, check each CAS number against the REACH registered substance database (UK and/or EU), assess your likely tonnage bands, and identify any substances of very high concern (SVHC) that need extra attention.</p>
@@ -121,7 +124,7 @@
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
           </div>
           <div class="service-body">
-            <div class="badge badge-accent">Service 2</div>
+            <div class="badge badge-accent">Most popular</div>
             <h2 id="only-rep-heading" class="service-heading">Only Representative (OR) — UK &amp; EU</h2>
             <p class="service-lead">If you're exporting chemicals to the UK or EU as a non-EU/non-UK manufacturer, you almost certainly need an Only Representative. This is the most common thing Indian exporters need from us.</p>
 
@@ -163,7 +166,7 @@
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
           </div>
           <div class="service-body">
-            <div class="badge badge-accent">Service 3</div>
+            <div class="badge badge-accent">Technical core</div>
             <h2 id="registration-heading" class="service-heading">REACH Registration &amp; Dossier Preparation</h2>
             <p class="service-lead">If your substance isn't already registered (or your tonnage has changed), you'll need to submit a registration dossier to ECHA or HSE. This is the most technically intensive part of REACH — and where our specialist network earns its keep.</p>
 
@@ -203,7 +206,7 @@
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
           <div class="service-body">
-            <div class="badge badge-accent">Service 4</div>
+            <div class="badge badge-accent">Brexit transition</div>
             <h2 id="brexit-heading" class="service-heading">UK REACH / Brexit Transition</h2>
             <p class="service-lead">Brexit created a separate UK chemical regulation — UK REACH — administered by the HSE. If you were selling into the UK via EU REACH registrations, you may have a separate obligation to address.</p>
 
@@ -237,7 +240,7 @@
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <div class="service-body">
-            <div class="badge badge-accent">Service 5</div>
+            <div class="badge badge-accent">Documentation</div>
             <h2 id="sds-heading" class="service-heading">Safety Data Sheets, Labels &amp; Supply Chain Documentation</h2>
             <p class="service-lead">Even if your substance is registered, your UK or EU buyer will likely ask for a compliant Safety Data Sheet (SDS) as part of the order process. Getting this wrong can hold up your first shipment.</p>
 
@@ -273,7 +276,7 @@
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
           </div>
           <div class="service-body">
-            <div class="badge badge-accent">Service 6</div>
+            <div class="badge badge-accent">Training &amp; support</div>
             <h2 id="training-heading" class="service-heading">Training &amp; On-call Consulting</h2>
             <p class="service-lead">Want your team to understand REACH well enough to manage day-to-day questions without always going to a consultant? We offer practical training workshops and retainer support.</p>
 
