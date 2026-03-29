@@ -136,6 +136,20 @@ p { line-height: 1.75; color: var(--text-muted); }
 .section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4 { color: var(--white); }
 .section-dark p { color: rgba(255,255,255,0.72); }
 .section-alt { background: var(--bg); }
+.section-steps-light { background: #FEF9EC; }
+.section-steps-light .step-number {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+.section-steps-light .step:hover .step-number {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--white);
+}
+.section-steps-light .step-title { color: var(--primary); }
+.section-steps-light .step-text  { color: var(--text-muted); }
+.section-steps-light .steps-grid::before { background: rgba(217,119,6,0.20); }
 
 .grid   { display: grid; gap: var(--space-6); }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
@@ -1947,4 +1961,54 @@ p { line-height: 1.75; color: var(--text-muted); }
   .tonnage-grid { grid-template-columns: 1fr; }
   .contact-form { padding: var(--space-5); }
   .btn-xl { padding: 15px 28px; font-size: var(--text-base); }
+}
+
+/* ── ABOUT PAGE ──────────────────────────────────────────── */
+.two-col-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: start;
+}
+.two-col-text .badge { margin-bottom: var(--space-4); display: inline-flex; }
+.two-col-text p {
+  font-size: var(--text-base);
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: var(--space-4);
+}
+.two-col-facts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.fact-card {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  transition: border-color var(--transition-md), box-shadow var(--transition-md);
+}
+.fact-card:hover { border-color: var(--accent); box-shadow: var(--shadow); }
+.fact-icon { font-size: 1.75rem; flex-shrink: 0; line-height: 1; }
+.fact-title {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-1);
+}
+.fact-text {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+@media (max-width: 1024px) {
+  .two-col-block { grid-template-columns: 1fr; gap: var(--space-10); }
+}
+@media (max-width: 768px) {
+  .two-col-block { gap: var(--space-8); }
 }
